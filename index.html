@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>music</title>
+    <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        bady {
+            height:100%;
+        }
+        .cover {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background:url(http://upload-images.jianshu.io/upload_images/8048507-c8c04e7019dd283e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) center center no-repeat;
+            background-size: cover;
+<<<<<<< HEAD
+            /* filter: blur(1px); */
+=======
+            filter: blur(2px);
+>>>>>>> 5ee3a2c0a5d80284fa01d6e1d271c25900d626bb
+        }
+        .musicbox {
+            position: absolute;
+            left: 50%;
+            top: 80%;
+            transform: translate(-50%,-50%);
+            font-family: Microsoft YaHei;
+            font-size: 16px;
+            color:rgb(243, 98, 154);
+            width: 340px;
+        }
+        .music-panel {
+            border: 1px solid rgba(155, 151, 151, 0.5);
+            padding: 20px 20px 5px 20px;
+            box-shadow: 0px 2px 5px 0px rgba(49, 48, 48, 0.1),0px 2px 10px 0px rgb(68, 67, 68);
+            background-color: rgba(255,255,255,0.9);
+        }
+        .musicbox .control {
+            margin-top: 20px;
+            font-size: 22px;
+            color: #808080;
+            float: left;
+        }
+        .musicbox .control .fa {
+            margin-right: 12px;
+            cursor: pointer;
+        }
+        .musicbox .control .fa.disable {
+            opacity: 0.3;
+        }
+        .musicbox .info {
+            margin-left: 120px;
+        }
+        .musicbox .info .title {
+            font-size: 18px;
+        }
+        .musicbox .info .auther {
+            font-size: 13px;
+        }
+        .musicbox .progress {
+            width: 260px;
+        }
+        .music .progress .bar {
+            height: 3px;
+            background-color: rgba(39, 38, 38, 0.2);
+            cursor: pointer;
+        }
+
+        .musicbox .progress .progress-now {
+            background-color: rgb(243, 98, 154);
+            height: 3px;
+            width: 5px;
+            position: absolute;
+            top: 80%;
+            left: 6%;
+        }
+        .musicbox .progress .progress-total {
+            background-color: rgb(61, 60, 61);
+            height: 3px;
+            width: 210px;
+            position: absolute;
+            top: 80%;
+            left: 6%;
+        }
+        .musicbox .time {
+            text-align: right;
+        }
+        .musicbox:after,
+        .musicbox .music:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .musicbox .list {
+            list-style: none;
+        }
+        .musicbox .list>li {
+            position: relative;
+            padding: 4px 10px;
+            border: 1px solid rgba(255,255,255,0.8);
+            border-top: none;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .musicbox .list>li:hover {
+            background-color: rgba(3, 3, 3, 0.5);
+        }
+        .musicbox .list>li.playing:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 30px;
+            background: rgba(12, 12, 12, 0.8);
+        }
+    </style>
+
+    <div class="cover"></div>
+    <!-- 音乐盒 -->
+    <div class="musicbox">
+        <div class="music-panel">
+            <div class="music">
+                <div class="control">
+                    <!-- 音乐控件 -->
+                    <span class="back"><i class="fa fa-step-backward"></i></span>
+                    <span class="play"><i class="fa fa-pause"></i></span>
+                    <span class="forward"><i class="fa fa-step-forward"></i></span>
+                </div>
+                <div class="info">
+                    <!-- 音乐信息 -->
+                    <div class="title">My song</div>
+                    <div class="auther">cmimi</div>
+                </div>
+            </div>
+
+            <div class="progress">
+                <!-- 音乐进度条 -->
+                <div class="bar">
+                    <div class="progress-total"></div>
+                    <div class="progress-now"></div>
+                </div>
+                <div class="time">0:00</div>
+            </div>
+        </div>
+        <ul class="list">
+            <!-- <li>那就这样吧-张一山<i class="fa fa-play"></i></li> -->
+        </ul>
+    </div>
+
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5ee3a2c0a5d80284fa01d6e1d271c25900d626bb
+<script>
+     var musicList = [{
+    "src": "http://music.163.com/song/media/outer/url?id=29769459",
+    "title": "Let It Go",
+    "auther": "James Bay",
+    "img": "http://upload-images.jianshu.io/upload_images/8048507-f3f6504d6ac7b744.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+  }, {
+    "src": "http://music.163.com/song/media/outer/url?id=27984071",
+    "title": "Last Christmas",
+    "auther": "Ariana Grande",
+    "img": "http://upload-images.jianshu.io/upload_images/8048507-082cbb32506ce832.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+  }, {
+    "src": "http://music.163.com/song/media/outer/url?id=27566704",
+    "title": "One More Night",
+    "auther": "alex goot",
+    "img": "http://upload-images.jianshu.io/upload_images/8048507-ef682c2a476ad7f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+  }, {
+    "src": "http://music.163.com/song/media/outer/url?id=498331794",
+    "title": "More Than You Know",
+    "auther": "J.Fla",
+    "img": "http://upload-images.jianshu.io/upload_images/8048507-410b8cff6ad2b723.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+  },{
+    "src": "http://music.163.com/song/media/outer/url?id=26200409",
+    "title": "You've Got A Friend In Me",
+    "auther": "Michael Bublé",
+    "lrc": "http://music.163.com/#/song?id=26200409",
+    "img": "http://upload-images.jianshu.io/upload_images/8048507-e67b383d30fb98e7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+  }]
+    var currentIndex = 0
+    var clock
+    var audio = new Audio()
+    audio.autoplay = true
+    getMusicList(function(list){
+      musicList = list
+      loadMusic(list[currentIndex])
+      generateList(list)
+    })
+    audio.ontimeupdate = function(){
+      $('.musicbox .progress-now').style.width = (this.currentTime/this.duration)*100 + '%'
+    }
+    audio.onplay = function(){
+      clock = setInterval(function(){
+        var min = Math.floor(audio.currentTime/60)
+        var sec = Math.floor(audio.currentTime)%60 + ''
+        sec = sec.length === 2? sec : '0' + sec
+        $('.musicbox .time').innerText = min + ':' + sec
+      }, 1000)
+    }
+    audio.onpause = function(){
+      clearInterval(clock)
+    }
+    audio.onended = function(){
+      console.log('end')
+      currentIndex =  (++currentIndex)%musicList.length
+      loadMusic(musicList[currentIndex])
+    }
+    $('.musicbox .play').onclick = function(){
+      if(audio.paused){
+        audio.play()
+        this.querySelector('.fa').classList.remove('fa-play')
+        this.querySelector('.fa').classList.add('fa-pause')
+      }else {
+        audio.pause()
+        this.querySelector('.fa').classList.add('fa-play')
+        this.querySelector('.fa').classList.remove('fa-pause')
+      }
+    }
+    $('.musicbox .forward').onclick = function(){
+      currentIndex =  (++currentIndex)%musicList.length
+      loadMusic(musicList[currentIndex])
+    }
+    $('.musicbox .back').onclick = function(){
+      currentIndex =  (musicList.length + --currentIndex)%musicList.length
+      loadMusic(musicList[currentIndex])
+    }
+    $('.musicbox .bar').onclick = function(e){
+      console.log(e)
+      var percent = e.offsetX / parseInt(getComputedStyle(this).width)
+      console.log(percent)
+      audio.currentTime = audio.duration * percent
+    }
+    function $(selector){
+      return document.querySelector(selector)
+    }
+    function getMusicList(callback){
+      var xhr = new XMLHttpRequest()
+      xhr.open('GET', 'musicList', true)
+      xhr.onload = function(){
+        if((xhr.status >=200 && xhr.status < 300) || xhr.status === 304){
+          callback(JSON.parse(this.responseText))
+        }else {
+          console.log('获取数据失败')
+        }
+      }
+      xhr.onerror = function(){
+        console.log('网络异常')
+      }
+      xhr.send()
+    }
+    function loadMusic(musicObj){
+      console.log('begin play ', musicObj)
+      $('.musicbox .title').innerText = musicObj.title
+      $('.musicbox .auther').innerText = musicObj.auther
+      $('.cover').style.backgroundImage = 'url(' + musicObj.img + ')'
+      audio.src = musicObj.src
+    }
+    function generateList(list){
+    }
+    </script>
+</body>
+</html>
