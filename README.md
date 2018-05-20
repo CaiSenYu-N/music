@@ -1,8 +1,8 @@
 * 播放器预览：https://caisenyu-n.github.io/music-P/
 
-#### API
+## API
 
-##### 属性
+### 属性
 
 * audioObject
 创建或者获取的audio对象，可通过以下两种方式得到
@@ -80,7 +80,7 @@ console.log(audioObject.currentTime)
 
 判断音乐是否播放完毕，只读属性
 
-##### 事件
+### 事件
 
 * playing
 
@@ -120,4 +120,6 @@ audioObject.shouldUpdate = true audioObject.ontimeupdate = function(){ var _this
 
 当音量改变时触发
 
+```
 audioObject.onvolumechange = function(){ console.log('volumechange') }
+```
