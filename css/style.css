@@ -1,0 +1,103 @@
+.cover {
+  position: absolute;
+  width: 100%;
+  height:100%;
+  background: url(https://desk-fd.zol-img.com.cn/t_s960x600c5/g3/M03/0D/03/Cg-4V1S_EOWIMyUCAAhG5zFfIHUAATsVQNFKM0ACEb_770.jpg) center center no-repeat;
+  background-size: cover;
+  filter: blur(1px);
+}
+.musicbox {
+  font-size: 15px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%,-50%);
+  width: 360px;
+  color: rgba(0,169,95);
+}
+.music-panel {
+  padding: 20px 20px 10px 20px;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 4px;
+  box-shadow: 0px 0px 2px 2px rgba(49, 48, 48, 0.8);
+}
+.music .control {
+  float: left;
+  margin-top: 24px;
+}
+.music .control .fa {
+  cursor: pointer;
+  font-size:20px;
+  margin-right: 8px;
+}
+.music .control .fa:hover {
+  color: rgba(0,169,95,0.5);
+}
+.music .info {
+  margin-left: 138px;
+}
+.music .info .title {
+  font-size: 18px;
+}
+.music .info .auter {
+  font-size: 12px;
+}
+.musicbox .progress {
+  width: 320px;
+}
+.musicbox .progress .bar {
+  height: 3px;
+  background-color: rgba(39,38,38,0.2);
+  cursor: pointer;
+  margin-top: 20px;
+  left: 6%;
+}
+.musicbox .progress .progress-now {
+  background-color: rgba(0,169,95);
+  height: 3px;
+  width: 0%;
+  position: relative;
+}
+/* .musicbox .progress .progress-total {
+  background-color: rgba(61,60,61);
+  height: 3px;
+  width: 260px;
+  position: absolute;
+  top: 70.8%;
+  left: 5%;
+} */
+.musicbox .time {
+  text-align: right;
+}
+.musicbox::after,
+.musicbox .music::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.musicbox .list {
+  list-style: none;
+}
+.musicbox .list>li {
+  position: relative;
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background-color: rgba(255,255, 255,0.5);
+  border-radius: 4px;
+  border-top: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.musicbox .list>li:hover {
+  background-color: rgba(255,255, 255,0.4);
+}
+.musicbox .list>li.playing:before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content:'';
+  display: inline-block;
+  width: 8px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.8);
+}
